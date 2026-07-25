@@ -1,0 +1,1440 @@
+:root {
+  --sky-50: #f4fbff;
+  --sky-100: #dff3ff;
+  --sky-300: #72c8f2;
+  --brand-blue: #1288d9;
+  --brand-blue-dark: #08558d;
+  --brand-green: #62bc4d;
+  --brand-green-dark: #378f2d;
+  --ink-900: #0f1820;
+  --ink-700: #31414f;
+  --ink-500: #5f7482;
+  --line: rgba(15, 24, 32, 0.12);
+  --white: #ffffff;
+  --shadow: 0 20px 55px rgba(9, 45, 72, 0.12);
+  --radius-lg: 28px;
+  --radius-md: 20px;
+  --radius-sm: 14px;
+  --container: 1160px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--ink-900);
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding-left: 1.15rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: "Trebuchet MS", "Avenir Next Condensed", "Arial Narrow", sans-serif;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.3rem, 8vw, 4.8rem);
+}
+
+h2 {
+  font-size: clamp(1.85rem, 5vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.35rem, 4vw, 1.85rem);
+}
+
+h4 {
+  font-size: 1.05rem;
+}
+
+.container {
+  width: min(calc(100% - 2rem), var(--container));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 4.5rem 0;
+}
+
+.section-light {
+  background: #f5f8fc;
+}
+
+.section-accent {
+  background: #eef4fb;
+}
+
+.section-contrast {
+  background:
+    linear-gradient(140deg, rgba(8, 85, 141, 0.96), rgba(15, 24, 32, 0.96)),
+    #0b1822;
+  color: var(--white);
+}
+
+.section-process {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: url("Images/statesboro-excavation-site.jpg") center/cover;
+}
+
+.section-process::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.74),
+    rgba(255, 255, 255, 0.8)
+  );
+}
+
+.section-process > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-faq {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(180deg, #f7fafc, #eef4f8);
+}
+
+.section-faq::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: url("Images/statesboro-excavation-site.jpg") center top / cover no-repeat;
+}
+
+.section-faq::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(245, 248, 252, 0.9));
+}
+
+.section-faq > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-blue-dark);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--brand-green), var(--brand-blue));
+}
+
+.section-heading {
+  display: grid;
+  gap: 1rem;
+  max-width: 760px;
+  margin-bottom: 2rem;
+}
+
+.section-heading-centered {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-heading-centered .eyebrow {
+  justify-self: center;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: calc(0.85rem - 10px) 0;
+  backdrop-filter: blur(16px);
+  background: rgba(248, 253, 255, 0.9);
+  border-bottom: 1px solid rgba(15, 24, 32, 0.06);
+}
+
+.header-shell {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-width: 0;
+}
+
+.brand-logo {
+  width: 220px;
+  height: 110px;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.brand-copy {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.brand-copy span {
+  font-family: "Trebuchet MS", "Avenir Next Condensed", "Arial Narrow", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.brand-copy small {
+  color: var(--ink-900);
+  font-weight: 800;
+}
+
+.nav-toggle {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.28rem;
+  width: 48px;
+  height: 48px;
+  margin-left: auto;
+  border: 1px solid rgba(18, 136, 217, 0.14);
+  border-radius: 14px;
+  background: rgba(18, 136, 217, 0.08);
+  color: var(--ink-900);
+  cursor: pointer;
+}
+
+.nav-toggle-bar {
+  width: 20px;
+  height: 2px;
+  margin: 0 auto;
+  border-radius: 999px;
+  background: currentColor;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.site-nav {
+  display: none;
+  order: 3;
+  width: 100%;
+  gap: 0.65rem;
+  padding-top: 0.35rem;
+  font-weight: 700;
+  color: var(--ink-700);
+}
+
+.site-nav.is-open {
+  display: grid;
+}
+
+.nav-group {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.nav-parent-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.55rem;
+  align-items: center;
+  min-height: 2.5rem;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(15, 24, 32, 0.08);
+  box-shadow: 0 14px 32px rgba(9, 45, 72, 0.08);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  color: inherit;
+  text-align: center;
+}
+
+.nav-parent {
+  font: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.nav-children {
+  display: none;
+  gap: 0.5rem;
+  padding-left: 0.9rem;
+}
+
+.nav-group.is-open .nav-children {
+  display: grid;
+}
+
+.nav-group-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  min-height: 1.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--ink-700);
+}
+
+.nav-group-toggle-bar {
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.nav-group-toggle {
+  position: relative;
+}
+
+.nav-group-toggle-bar:nth-child(1) {
+  transform: translateX(-3px) rotate(45deg);
+}
+
+.nav-group-toggle-bar:nth-child(2) {
+  transform: translateX(3px) rotate(-45deg);
+}
+
+.nav-group.is-open .nav-group-toggle-bar:nth-child(1) {
+  transform: translateX(-3px) rotate(-45deg);
+}
+
+.nav-group.is-open .nav-group-toggle-bar:nth-child(2) {
+  transform: translateX(3px) rotate(45deg);
+}
+
+.site-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.site-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(15, 24, 32, 0.08);
+  box-shadow: 0 14px 32px rgba(9, 45, 72, 0.08);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav-children a {
+  justify-content: flex-start;
+  min-height: 2.3rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 14px;
+  background: rgba(242, 248, 253, 0.96);
+  font-size: 0.96rem;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.nav-parent-row:hover,
+.nav-parent-row:focus-within,
+.nav-parent-row:focus-visible {
+  background: rgba(18, 136, 217, 0.1);
+  border-color: rgba(18, 136, 217, 0.2);
+  color: var(--brand-blue-dark);
+}
+
+.header-call {
+  display: none;
+  min-height: 42px;
+  padding: 0.55rem 1rem;
+  font-size: 0.95rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+@media (max-width: 919px) {
+  .header-call {
+    display: none !important;
+  }
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0.85rem 1.3rem;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-weight: 800;
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-1px);
+}
+
+.button-solid {
+  background: linear-gradient(135deg, var(--brand-blue), #0a6cb0);
+  color: var(--white);
+  box-shadow: 0 14px 30px rgba(18, 136, 217, 0.25);
+}
+
+.button-outline {
+  border-color: rgba(18, 136, 217, 0.34);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--brand-blue-dark);
+}
+
+.section-contrast .button-outline,
+.sticky-cta .button-outline {
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+}
+
+.hero-section {
+  padding: 0 0 3.5rem;
+}
+
+.hero-shell {
+  overflow: hidden;
+  padding: 2.25rem 0 2.5rem;
+  border-radius: 0;
+  background:
+    linear-gradient(rgba(15, 24, 32, 0.7), rgba(15, 24, 32, 0.72)),
+    url("Images/statesboro-land-clearing.png") center/cover;
+}
+
+.hero-grid {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.hero-shell .eyebrow {
+  color: #d8f0ff;
+}
+
+.hero-copy,
+.service-card,
+.image-column,
+.about-card,
+ .process-card,
+ .contact-mini-card,
+ .testimonial-card,
+.estimate-form,
+.faq-item,
+.contact-copy {
+  border-radius: var(--radius-lg);
+}
+
+.hero-copy {
+  display: grid;
+  gap: 1rem;
+  max-width: 640px;
+  color: var(--white);
+}
+
+.hero-copy p:not(.eyebrow):not(.hero-cta-copy) {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.lead {
+  font-size: 1.08rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.hero-cta-copy {
+  font-weight: 800;
+  color: #d8f0ff;
+}
+
+.hero-actions {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 0.35rem;
+}
+
+.text-link,
+.contact-points a,
+.footer-links a {
+  color: var(--brand-blue-dark);
+  font-weight: 800;
+}
+
+.service-stack {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.service-card {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow);
+}
+
+.service-image img {
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+}
+
+.service-copy {
+  display: grid;
+  gap: 1rem;
+  padding: 1.6rem;
+}
+
+.service-copy ul,
+.feature-list,
+.pill-list,
+.service-area-grid,
+.process-grid,
+.testimonial-grid,
+.faq-list {
+  margin: 0;
+}
+
+.pill-list,
+.service-area-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  padding: 0;
+  list-style: none;
+}
+
+.pill-list span,
+.service-area-grid span {
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(18, 136, 217, 0.16);
+  font-weight: 700;
+}
+
+.feature-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.why-grid,
+.split-band,
+.contact-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.image-column,
+.about-card,
+.contact-mini-card,
+.testimonial-card,
+.process-card,
+.estimate-form,
+.contact-copy {
+  padding: 1.4rem;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.image-column {
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.image-column img {
+  border-radius: calc(var(--radius-lg) - 10px);
+  aspect-ratio: 5 / 3.7;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.about-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.about-actions {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.process-grid,
+.testimonial-grid,
+.faq-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.process-grid,
+.testimonial-grid,
+.faq-list,
+.split-band,
+.contact-grid {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.process-card span {
+  display: inline-flex;
+  width: 3rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-green));
+  color: var(--white);
+  font-weight: 900;
+}
+
+.process-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(3px);
+}
+
+.contact-mini-card {
+  display: grid;
+  gap: 0.9rem;
+  align-content: start;
+  background: #ffffff;
+}
+
+.testimonial-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.testimonial-card h3 {
+  color: var(--brand-green-dark);
+}
+
+.contact-grid {
+  align-items: start;
+}
+
+.section-contrast .eyebrow,
+.section-contrast .contact-points a {
+  color: #b8e8ff;
+}
+
+.section-contrast .contact-copy,
+.section-contrast .estimate-form {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: none;
+}
+
+.contact-copy {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-points {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.estimate-form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.form-heading {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 0.2rem;
+}
+
+.estimate-form label {
+  font-weight: 700;
+}
+
+.estimate-form input,
+.estimate-form textarea {
+  width: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.26);
+  border-radius: var(--radius-sm);
+  padding: 0.95rem 1rem;
+  background: rgba(255, 255, 255, 0.98);
+  color: var(--ink-900);
+  font: inherit;
+}
+
+.estimate-form input:focus,
+.estimate-form textarea:focus {
+  outline: none;
+  border-color: #8ed7ff;
+  box-shadow: 0 0 0 4px rgba(142, 215, 255, 0.18);
+}
+
+.form-note,
+.form-status {
+  font-size: 0.95rem;
+}
+
+.form-note a {
+  color: #b8e8ff;
+  font-weight: 800;
+}
+
+.form-status {
+  min-height: 1.4rem;
+  color: #d6f4ff;
+}
+
+.faq-item {
+  padding: 1.1rem 1.2rem;
+  background: #ffffff;
+  border: 1px solid var(--line);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-family: "Trebuchet MS", "Avenir Next Condensed", "Arial Narrow", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  float: right;
+  color: var(--brand-blue);
+}
+
+.faq-item[open] summary::after {
+  content: "-";
+}
+
+.faq-item p {
+  margin-top: 0.9rem;
+  color: var(--ink-700);
+}
+
+.site-footer {
+  padding: 2rem 0 6rem;
+  background: #0f1820;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.footer-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.footer-brand .brand-copy small,
+.footer-seo {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-seo {
+  margin-top: 1rem;
+}
+
+.footer-links {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.footer-links a {
+  color: #9ddfff;
+}
+
+.sticky-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 25;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem calc(0.85rem + env(safe-area-inset-bottom));
+  background: rgba(15, 24, 32, 0.94);
+  box-shadow: 0 -18px 45px rgba(15, 24, 32, 0.24);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(110%);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s ease;
+}
+
+.sticky-cta.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mobile-phone-button {
+  min-height: 40px;
+  padding: 0.55rem 0.9rem;
+  font-size: 1rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.js-enabled .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+.js-enabled .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 700px) {
+  .hero-actions {
+    grid-template-columns: repeat(2, max-content);
+  }
+
+  .about-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .process-grid,
+  .testimonial-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-grid {
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: start;
+  }
+}
+
+@media (min-width: 920px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .header-shell {
+    flex-wrap: nowrap;
+  }
+
+  .site-nav {
+    display: inline-flex;
+    order: 0;
+    width: auto;
+    gap: 1rem;
+    padding: 0;
+    overflow: visible;
+    white-space: normal;
+  }
+
+  .nav-group {
+    position: relative;
+    align-items: center;
+  }
+
+  .nav-parent-row {
+    display: inline-flex;
+    gap: 0.55rem;
+    align-items: center;
+    min-height: auto;
+    width: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .nav-children {
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    left: 0;
+    min-width: 280px;
+    padding: 0.85rem;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(15, 24, 32, 0.08);
+    box-shadow: 0 18px 40px rgba(9, 45, 72, 0.14);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease,
+      visibility 0.2s ease;
+    z-index: 30;
+  }
+
+  .nav-group.is-open .nav-children {
+    display: grid;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .header-call {
+    display: inline-flex;
+  }
+
+  .site-nav a {
+    display: inline-flex;
+    width: auto;
+    min-height: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .nav-parent {
+    min-height: auto;
+  }
+
+  .nav-group-toggle {
+    display: none;
+  }
+
+  .nav-children a {
+    width: 100%;
+    min-height: auto;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid rgba(15, 24, 32, 0.05);
+    background: rgba(248, 251, 255, 0.98);
+    border-radius: 14px;
+    box-shadow: none;
+    justify-content: flex-start;
+  }
+
+  .site-nav > a:hover,
+  .site-nav > a:focus-visible,
+  .nav-parent:hover,
+  .nav-parent:focus-visible {
+    color: var(--brand-blue-dark);
+  }
+
+  .section-process {
+    background-attachment: fixed;
+  }
+
+  .why-grid,
+  .split-band {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+  }
+
+  .service-card,
+  .service-card-reversed {
+    grid-template-columns: 0.92fr 1.08fr;
+  }
+
+  .service-card-reversed .service-image {
+    order: 2;
+  }
+
+  .service-card-reversed .service-copy {
+    order: 1;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .sticky-cta {
+    display: none;
+  }
+}
+
+@media (min-width: 1080px) {
+  .section {
+    padding: 5.5rem 0;
+  }
+
+  .hero-section {
+    padding: 0 0 5rem;
+  }
+
+  .site-footer {
+    padding-bottom: 2.5rem;
+  }
+}
+
+.page-main {
+  background: linear-gradient(180deg, #f8fbfe 0%, #eef5fa 100%);
+}
+
+.page-hero {
+  padding: 5rem 0 3rem;
+  background:
+    linear-gradient(rgba(15, 24, 32, 0.78), rgba(15, 24, 32, 0.72)),
+    url("/Images/statesboro-land-clearing.png") center/cover;
+  color: var(--white);
+}
+
+.page-hero.page-hero-light {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(244, 249, 253, 0.92)),
+    url("/Images/statesboro-excavation-site.jpg") center/cover;
+  color: var(--ink-900);
+}
+
+.page-hero.page-hero-light .eyebrow,
+.page-hero.page-hero-light p {
+  color: var(--ink-700);
+}
+
+.page-hero.page-hero-light .eyebrow::before {
+  background: linear-gradient(135deg, var(--brand-green), var(--brand-blue));
+}
+
+.page-hero-shell {
+  display: grid;
+  gap: 1rem;
+  max-width: 760px;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.page-hero-light .breadcrumb {
+  color: var(--ink-500);
+}
+
+.breadcrumb a {
+  color: inherit;
+}
+
+.page-intro {
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.page-section {
+  padding: 4rem 0;
+}
+
+.page-grid {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.content-card,
+.sidebar-card,
+.service-teaser,
+.project-card,
+.area-card,
+.faq-page-item {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(15, 24, 32, 0.08);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.content-card,
+.sidebar-card,
+.service-teaser,
+.project-card,
+.area-card,
+.faq-page-item {
+  padding: 1.5rem;
+}
+
+.content-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.content-card h2,
+.content-card h3 {
+  margin-bottom: 0.15rem;
+}
+
+.content-card p,
+.content-card li,
+.sidebar-card p,
+.service-teaser p,
+.project-card p,
+.area-card p,
+.faq-page-item p {
+  color: var(--ink-700);
+}
+
+.content-card ul,
+.service-bullet-list,
+.check-list,
+.area-list,
+.project-meta {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.content-card ul,
+.service-bullet-list,
+.check-list,
+.area-list {
+  padding-left: 1.2rem;
+}
+
+.service-link-grid,
+.area-grid,
+.project-grid,
+.stats-grid,
+.service-teaser-grid {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.service-teaser {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.service-areas-intro,
+.service-areas-conclusion {
+  margin-bottom: 1.5rem;
+}
+
+.service-area-grid {
+  display: grid;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-area-card {
+  display: grid;
+  gap: 0.8rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(15, 24, 32, 0.08);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.service-area-card p {
+  color: var(--ink-700);
+}
+
+.service-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(18, 136, 217, 0.14), rgba(98, 188, 77, 0.2));
+  border: 1px solid rgba(18, 136, 217, 0.14);
+  font-size: 1.35rem;
+}
+
+.service-teaser h3,
+.project-card h3,
+.area-card h3 {
+  font-size: 1.45rem;
+}
+
+.mini-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-blue-dark);
+}
+
+.inline-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.sidebar-card {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+  position: sticky;
+  top: 96px;
+}
+
+.sidebar-card h3 {
+  font-size: 1.35rem;
+}
+
+.contact-form-card {
+  background: linear-gradient(135deg, var(--brand-blue), #0a6cb0);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 24px 48px rgba(8, 85, 141, 0.22);
+}
+
+.contact-form-card h3,
+.contact-form-card p,
+.contact-form-card label,
+.contact-form-card .form-status {
+  color: var(--white);
+}
+
+.contact-form-card .page-form input,
+.contact-form-card .page-form select,
+.contact-form-card .page-form textarea {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.contact-form-card .page-form input::placeholder,
+.contact-form-card .page-form textarea::placeholder {
+  color: rgba(15, 24, 32, 0.48);
+}
+
+.contact-form-card .page-form input:focus,
+.contact-form-card .page-form select:focus,
+.contact-form-card .page-form textarea:focus {
+  border-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.18);
+}
+
+.contact-form-card .button-solid {
+  background: rgba(255, 255, 255, 0.98);
+  color: var(--brand-blue-dark);
+  box-shadow: 0 16px 30px rgba(8, 85, 141, 0.18);
+}
+
+.contact-form-card .button-solid:hover,
+.contact-form-card .button-solid:focus-visible {
+  box-shadow: 0 18px 34px rgba(8, 85, 141, 0.24);
+}
+
+.stats-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.stat-card {
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  background: rgba(18, 136, 217, 0.08);
+  border: 1px solid rgba(18, 136, 217, 0.12);
+}
+
+.stat-card strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 1.5rem;
+  font-family: "Trebuchet MS", "Avenir Next Condensed", "Arial Narrow", sans-serif;
+}
+
+.project-card,
+.area-card,
+.faq-page-item {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.faq-page-item summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 1.15rem;
+  font-weight: 800;
+  font-family: "Trebuchet MS", "Avenir Next Condensed", "Arial Narrow", sans-serif;
+}
+
+.faq-page-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-page-item summary::after {
+  content: "+";
+  float: right;
+  color: var(--brand-blue);
+}
+
+.faq-page-item[open] summary::after {
+  content: "-";
+}
+
+.faq-page-item p {
+  margin-top: 0.8rem;
+}
+
+.page-form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.page-form label {
+  font-weight: 700;
+}
+
+.page-form input,
+.page-form select,
+.page-form textarea {
+  width: 100%;
+  border: 1px solid rgba(15, 24, 32, 0.14);
+  border-radius: var(--radius-sm);
+  padding: 0.95rem 1rem;
+  background: #fff;
+  color: var(--ink-900);
+  font: inherit;
+}
+
+.page-form input:focus,
+.page-form select:focus,
+.page-form textarea:focus {
+  outline: none;
+  border-color: var(--brand-blue);
+  box-shadow: 0 0 0 4px rgba(18, 136, 217, 0.12);
+}
+
+.page-form-note {
+  color: var(--ink-500);
+  font-size: 0.95rem;
+}
+
+.page-banner {
+  padding: 1.25rem 1.4rem;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(18, 136, 217, 0.1), rgba(98, 188, 77, 0.1));
+  border: 1px solid rgba(18, 136, 217, 0.12);
+}
+
+@media (min-width: 920px) {
+  .page-grid {
+    grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+  }
+
+  .service-link-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .service-area-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-grid,
+  .area-grid,
+  .service-teaser-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

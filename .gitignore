@@ -1,0 +1,19 @@
+.DS_Store
+deploy/
+test.html
+config.php
+
+# Unused source images retained locally
+Images/ChatGPT*
+Images/JPEG/
+Images/*elizabethtown*
+Images/drainage contractor statesboro.png
+Images/home dig solution .png
+Images/home dig solutions.png
+Images/home-dig-solutions-footer-removebg-preview.png
+Images/home-dig-solutions-footer.gif
+Images/home-dig-solutions-footer.jpg
+Images/land clearing statesboro.png
+Images/logo-home-dig-solutions.jpg
+Images/man on mini excavator removing tree stump.png
+Images/septic excavation.jpg
