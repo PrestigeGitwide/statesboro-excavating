@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 120" role="img" aria-labelledby="title desc">
+  <title id="title">Statesboro Excavating</title>
+  <desc id="desc">Statesboro Excavating wordmark</desc>
+  <g fill="none" fill-rule="evenodd">
+    <path fill="#1687d9" d="M18 77h66l18-35h39l-13 17h-17L99 83H18z"/>
+    <circle cx="43" cy="91" r="16" fill="#0c2d48"/>
+    <circle cx="115" cy="91" r="16" fill="#0c2d48"/>
+    <path stroke="#0c2d48" stroke-width="8" stroke-linecap="round" d="M21 104h125"/>
+    <text x="165" y="63" fill="#0c2d48" font-family="Arial, Helvetica, sans-serif" font-size="45" font-weight="800" letter-spacing="1">STATESBORO</text>
+    <text x="166" y="101" fill="#1687d9" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" letter-spacing="7">EXCAVATING</text>
+  </g>
+</svg>

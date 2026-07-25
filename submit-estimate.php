@@ -128,7 +128,7 @@ $turnstileResponse = postForm(
 );
 
 if ($turnstileResponse['error']) {
-    error_log('Home Dig Solutions form Turnstile request failed: ' . $turnstileResponse['error']);
+    error_log('Statesboro Excavating form Turnstile request failed: ' . $turnstileResponse['error']);
 
     respond(502, [
         'ok' => false,
@@ -139,7 +139,7 @@ if ($turnstileResponse['error']) {
 $turnstileJson = json_decode($turnstileResponse['body'] ?? '', true);
 
 if (!is_array($turnstileJson) || empty($turnstileJson['success'])) {
-    error_log('Home Dig Solutions form Turnstile verification failed: HTTP ' . $turnstileResponse['status'] . ' body ' . substr((string) $turnstileResponse['body'], 0, 500));
+    error_log('Statesboro Excavating form Turnstile verification failed: HTTP ' . $turnstileResponse['status'] . ' body ' . substr((string) $turnstileResponse['body'], 0, 500));
 
     respond(422, [
         'ok' => false,
@@ -166,7 +166,7 @@ $leadPayload = [
     'comments' => $message,
     'service_type' => $serviceType,
     'serviceType' => $serviceType,
-    'source' => 'Home Dig Solutions Website',
+    'source' => 'Statesboro Excavating Website',
     'page' => $pageUrl,
     'page_url' => $pageUrl,
     'pageUrl' => $pageUrl,
@@ -185,15 +185,15 @@ $leadPayload = [
 $webhookResponse = postJson(GOHIGHLEVEL_WEBHOOK_URL, $leadPayload);
 
 if ($webhookResponse['error'] || $webhookResponse['status'] >= 400) {
-    error_log('Home Dig Solutions form GHL webhook failed: HTTP ' . $webhookResponse['status'] . ' error ' . $webhookResponse['error'] . ' body ' . substr((string) $webhookResponse['body'], 0, 500));
+    error_log('Statesboro Excavating form GHL webhook failed: HTTP ' . $webhookResponse['status'] . ' error ' . $webhookResponse['error'] . ' body ' . substr((string) $webhookResponse['body'], 0, 500));
 
     respond(502, [
         'ok' => false,
-        'message' => 'Your request could not be sent right now. Please call (270) 317-1996.'
+        'message' => 'Your request could not be sent right now. Please call 555-555-5555.'
     ]);
 }
 
-error_log('Home Dig Solutions form GHL webhook delivered: HTTP ' . $webhookResponse['status'] . ' body ' . substr((string) $webhookResponse['body'], 0, 500));
+error_log('Statesboro Excavating form GHL webhook delivered: HTTP ' . $webhookResponse['status'] . ' body ' . substr((string) $webhookResponse['body'], 0, 500));
 
 respond(200, [
     'ok' => true,

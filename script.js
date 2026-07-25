@@ -59,7 +59,7 @@ estimateForms.forEach((form) => {
       const payload = await response.json();
 
       statusMessage.textContent =
-        payload.message || "Something went wrong. Please call (270) 317-1996.";
+        payload.message || "Something went wrong. Please call 555-555-5555.";
 
       if (response.ok && payload.ok) {
         window.dataLayer = window.dataLayer || [];
@@ -76,7 +76,7 @@ estimateForms.forEach((form) => {
       }
     } catch (error) {
       statusMessage.textContent =
-        "Something went wrong while sending your request. Please call (270) 317-1996.";
+        "Something went wrong while sending your request. Please call 555-555-5555.";
     } finally {
       if (submitButton) {
         submitButton.disabled = false;
